@@ -5,11 +5,8 @@ import Navbar from './components/Navbar';
 import News from './components/News';
 import { BrowserRouter } from 'react-router-dom'
 import {
-  // createBrowserRouter,
-  // RouterProvider,
   Route,
   Routes,
-  // Link,
 } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 
