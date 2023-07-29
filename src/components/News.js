@@ -16,10 +16,7 @@ const News=(props)=>{
   }
 
  
-  document.title = `NewsFeed - ${capitalizeFirstLetter(
-    props.category
-  )}`;
-
+  
   const updateNews= async()=> {
     props.setProgress(10);
     const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
@@ -68,10 +65,13 @@ const News=(props)=>{
     setLoading(false);
   };
 
-
+  document.title = `NewsFeed - ${capitalizeFirstLetter(
+    props.category
+  )}`;
+  
     return (
       <>
-        <h2 className="text-center my-4">
+        <h2 className="text-center" style={{margin: '90px 0px 20px 0px'}}>
           NewsFeed - Top {capitalizeFirstLetter(props.category)}{" "}
           headlines
         </h2>
@@ -122,6 +122,7 @@ News.propTypes = {
   pageSize: PropTypes.number,
   category: PropTypes.string,
 };
+
 
 
 export default News;
